@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Management SyStem</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body{
+            background: rgb(35, 35, 35);
+        }
+        nav{
+            margin-top:4px;
+        }
+        .cs{
+            display:block;
+            margin-top: 10%;
+        }
+        .d-grid{
+            padding:5px;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+            <div class="col-12 d-flex justify-content-center mb-3">
+                <a class="navbar-brand" href="{%url 'index'%}"
+                ><img
+                id="MDB-logo"
+                src="https://mdbcdn.b-cdn.net/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
+                alt="MDB Logo"
+                draggable="false"
+                height="30"
+            /></a>
+            </div>
+            </div>
+        </div>
+        </nav>
+        <div class="cs">
+            <form action="{%url 'add'%}"  method="GET">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="submit" class="btn btn-primary btn-lg" >Add Employees</button>
+                </div>
+            </form>
+            <form action="{%url 'list' %}"  method="GET">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="submit" class="btn btn-secondary btn-lg" >View Employees</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
